@@ -68,21 +68,21 @@ Avant d'exporter quoi que ce soit, envoyer les liens Figma à Claude. Claude jou
 
 | Rôle | Status | Tâche |
 |------|--------|-------|
-| 🎨 | [ ] | Exporter TOUTES les images depuis Figma (mockups, backgrounds, icônes, photos, patterns) |
-| 🎨 | [ ] | Exporter les vidéos si applicable |
-| 🎨 | [ ] | Nommage strict : tirets, pas d'accents, pas d'espaces, pas d'apostrophes (ex: mockup-home-bouygues.png, pas Mockup Home Bouygues's.png) |
-| 🎨 | [ ] | Organiser dans des sous-dossiers logiques (images/projects/bouygues/, images/hero/, images/icons/) |
-| 🎨 | [ ] | Vérifier que chaque image référencée dans les maquettes a son fichier exporté correspondant |
+| 🎨 | [x] | Exporter TOUTES les images depuis Figma (mockups, backgrounds, icônes, photos, patterns) |
+| 🎨 | [x] | Exporter les vidéos si applicable (aucune vidéo dans le projet) |
+| 💻 | [x] | Nommage strict : tirets, pas d'accents, pas d'espaces, pas d'apostrophes — renommé par Claude |
+| 🎨 | [x] | Organiser dans des sous-dossiers logiques (assets/icons/, assets/backgrounds/, assets/apps/, assets/loaders/) |
+| 🎨 | [x] | Vérifier que chaque image référencée dans les maquettes a son fichier exporté correspondant |
 
 ### 0.4 - Setup Git
 
 | Rôle | Status | Tâche |
 |------|--------|-------|
-| 🎨 | [ ] | Créer le repo Git (ou vérifier qu'il existe) |
-| 🎨 | [ ] | Vérifier que la clé SSH est configurée (pour éviter le blocage en pleine prod) |
-| 🎨 | [ ] | Mettre tous les assets dans le dossier projet |
-| 🎨 | [ ] | Commit initial avec tous les assets |
-| 🎨 | [ ] | Vérifier que le push fonctionne |
+| 🎨 | [x] | Créer le repo Git (ou vérifier qu'il existe) |
+| 🎨 | [x] | Vérifier que la clé SSH est configurée (pour éviter le blocage en pleine prod) |
+| 🎨 | [x] | Mettre tous les assets dans le dossier projet |
+| 💻 | [x] | Commit initial avec tous les assets |
+| 💻 | [x] | Vérifier que le push fonctionne |
 
 Gate : toutes les cases cochées (0.1 + 0.2 + 0.3 + 0.4) avant de passer à la phase 1.
 
@@ -90,14 +90,14 @@ Gate : toutes les cases cochées (0.1 + 0.2 + 0.3 + 0.4) avant de passer à la p
 
 | Rôle | Status | Tâche |
 |------|--------|-------|
-| 🎨 | [ ] | Envoyer les liens Figma (DS + maquettes desktop + mobile) |
-| 💻 | [ ] | Fetch Figma + produire le tableau d'audit comparatif |
-| 🔍 | [ ] | Vérification : tokens lisibles ? Éléments manquants ? Ambiguïtés ? |
-| 🔍 | [ ] | Questions numérotées envoyées au designer |
-| 🎨 | [ ] | Répondre à toutes les questions en un bloc |
-| 💻 | [ ] | Mettre à jour CLAUDE.md avec les décisions |
-| 🔍 | [ ] | Vérification finale : plus aucune zone d'ombre ? |
-| 🎨 | [ ] | Confirmer : OK, plus de questions |
+| 🎨 | [x] | Envoyer les liens Figma (DS + maquettes desktop + mobile) |
+| 💻 | [x] | Fetch Figma + produire le tableau d'audit comparatif |
+| 🔍 | [x] | Vérification : tokens lisibles ? Éléments manquants ? Ambiguïtés ? |
+| 🔍 | [x] | Questions numérotées envoyées au designer (14 questions) |
+| 🎨 | [x] | Répondre à toutes les questions en un bloc |
+| 💻 | [x] | Mettre à jour CLAUDE.md avec les décisions |
+| 🔍 | [x] | Vérification finale : plus aucune zone d'ombre ? |
+| 🎨 | [x] | Confirmer : OK, plus de questions |
 
 Gate : les deux confirment, on passe à la phase 2.
 
@@ -105,9 +105,9 @@ Gate : les deux confirment, on passe à la phase 2.
 
 | Rôle | Status | Tâche |
 |------|--------|-------|
-| 💻 | [ ] | Créer les tokens CSS (couleurs, typo, spacings, radius, breakpoints) |
-| 💻 | [ ] | Construire la page styleguide (composants + variants + states) |
-| 💻 | [ ] | Push |
+| 💻 | [x] | Créer les tokens Python (couleurs, typo, spacings, radius, effets, animations) |
+| 💻 | [x] | Construire la page styleguide (palettes, typo, spacings, blocs, barres, icônes) |
+| 💻 | [x] | Push |
 | 🔍 | [ ] | Auto-vérification : comparer le styleguide codé vs le DS Figma, signaler les écarts |
 | 🎨 | [ ] | Review visuelle du styleguide |
 | 🎨 | [ ] | Envoyer les retours en batch |

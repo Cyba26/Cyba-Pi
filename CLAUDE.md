@@ -13,11 +13,30 @@ CybOS est l'interface de la Raspberry Pi de Cyba. C'est un hub qui se lance à l
 - Inputs : MCP23017 via I2C (GPIO)
 
 ## Commandes
-- Dev : `python main.py` (à confirmer)
+- Dev : `python3 main.py`
+- Styleguide : `python3 main.py --styleguide`
 - Build : N/A (exécution directe Python)
 
 ## Structure du projet
-[Arborescence des fichiers clés, mise à jour au fur et à mesure]
+```
+CybOS/
+├── main.py                      # Point d'entrée
+├── CLAUDE.md                    # Contexte projet
+├── TODO-CLAUDE.md               # Suivi des tâches
+├── assets/
+│   ├── apps/                    # Illustrations d'apps (SVG)
+│   ├── backgrounds/             # Éléments décoratifs (SVG)
+│   ├── fonts/                   # Fonts (DM Serif Text)
+│   ├── icons/                   # Icônes (SVG)
+│   └── loaders/                 # Frames d'animation loader (SVG)
+└── src/
+    ├── core/
+    │   ├── tokens.py            # Design tokens (couleurs, typo, spacings...)
+    │   └── renderer.py          # Fonctions de rendu (texte, formes, blocs)
+    ├── components/              # Composants réutilisables (à venir)
+    └── screens/
+        └── styleguide.py        # Page de démo du DS
+```
 
 ## Design Tokens
 
@@ -139,10 +158,24 @@ CybOS est l'interface de la Raspberry Pi de Cyba. C'est un hub qui se lance à l
 - **Welcome bar** : vraie progression si > 3s, sinon fake de 3s
 - **Move app** : déclenché par clic long (2s) sur une app
 - **Pop-ups** : navigation gauche/droite entre les options. Shutdown accessible depuis Settings
-- **Typo "Oublier"** : corrigé côté Figma (plus de franglish)
+- **Langue** : tout en français pour la prod (Paramètres, Accueil, Système, Clair/Foncé, etc.)
+- **Pop-up template** : "Erreur + [Description]" est un générique réutilisable, pas du contenu final
 
 ## Gotchas
 [Pièges techniques rencontrés et leurs solutions]
+
+## Erreurs et corrections
+
+### Figma (🎨 Designer)
+- **Franglish dans les maquettes** : "Settings", "Home", "Light/Dark", "Power off" utilisés à la place du français. Corrigé → Paramètres, Accueil, Clair/Foncé, Éteindre
+- **"Hover" au lieu de "clic long"** : l'annotation sur le move app indiquait "hover" alors qu'il n'y a pas de souris — c'est un clic long 2s. Corrigé dans Figma
+- **Nommage des assets Figma** : export avec le format Figma brut (virgules, espaces, `Name=`, `Color=`). Corrigé par Claude au renommage
+
+### Dev (💻 Claude)
+[À remplir au fil du projet]
+
+### Process
+[À remplir au fil du projet]
 
 ## Conventions
 [Règles de nommage, patterns récurrents]
